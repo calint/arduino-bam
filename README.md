@@ -10,3 +10,4 @@ a toy game for trying out devices and compare performances
   - adding the file as an include in `bam/devices.hpp`
 * supports resistive touch screens using `library/XPT2046_Touchscreen`
 * supports a wide array of displays and busses using `library/Arduino_GFX`
+  - busses ESP32SPI and ESP32QSPI support asynchronous DMA transfers for increased performance
