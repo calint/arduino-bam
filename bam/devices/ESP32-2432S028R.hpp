@@ -26,4 +26,8 @@ static Arduino_ESP32SPI bus{
   13 /* MOSI */,
   12 /* MISO */
 };
-static Arduino_ILI9341 display{ &bus, GFX_NOT_DEFINED /* RST */, TFT_ORIENTATION /* rotation */ };
+static Arduino_ILI9341 display{
+  &bus,
+  GFX_NOT_DEFINED /* RST */,
+  TFT_ORIENTATION /* rotation */
+};

@@ -21,10 +21,16 @@
 // reviewed: 2024-05-01
 
 #include <Arduino.h>
+
+#include "game/defs.hpp"
+
 #include <Arduino_GFX_Library.h>
 
-// configured devices
 #include "devices.hpp"
+
+#include "platform.hpp"
+
+#include "engine.hpp"
 
 // main entry file to user code
 #include "game/main.hpp"

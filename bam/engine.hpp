@@ -4,9 +4,6 @@
 // reviewed: 2023-12-11
 // reviewed: 2024-05-01
 
-// include platform constants
-#include "platform.hpp"
-
 #include "o1store.hpp"
 
 #include <cstdint>

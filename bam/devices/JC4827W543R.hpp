@@ -27,4 +27,9 @@ static Arduino_ESP32QSPI bus{
   40 /* d2 */,
   39 /* d3 */
 };
-static Arduino_NV3041A display{ &bus, GFX_NOT_DEFINED /* RST */, TFT_ORIENTATION, true /* IPS */ };
+static Arduino_NV3041A display{
+  &bus,
+  GFX_NOT_DEFINED /* RST */,
+  TFT_ORIENTATION,
+  true /* IPS */
+};

@@ -4,8 +4,6 @@
 
 // reviewed: 2005-05-01
 
-// first include engine
-#include "../engine.hpp"
 // then the game state
 #include "game_state.hpp"
 // then the objects
@@ -235,9 +233,10 @@ static void main_wave_4() {
 
 static void main_wave_5() {
   float y = -float(sprite_height);
+  constexpr float dx = display_width / 12;
   for (int j = 0; j < 12; j++, y -= 10) {
-    float x = 8;
-    for (int i = 0; i < 19; i++, x += 11) {
+    float x = 0;
+    for (int i = 0; i < 19; i++, x += dx) {
       ship1 *shp = new (objects.allocate_instance()) ship1{};
       shp->x = x;
       shp->y = y;
