@@ -1,3 +1,6 @@
+#pragma once
+#include <Arduino_GFX_Library.h>
+
 // display information
 #define TFT_WIDTH 480
 #define TFT_HEIGHT 272

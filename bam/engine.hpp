@@ -7,7 +7,6 @@
 #include "o1store.hpp"
 
 #include <cstdint>
-#include <cstring>
 #include <limits>
 
 // palette used when rendering tiles

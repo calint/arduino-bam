@@ -20,21 +20,18 @@
 // reviewed: 2023-12-11
 // reviewed: 2024-05-01
 
+// include order matters
 #include <Arduino.h>
-
+//
 #include "game/defs.hpp"
-
-#include <Arduino_GFX_Library.h>
-
+//
 #include "devices.hpp"
-
+//
 #include "platform.hpp"
-
+//
 #include "engine.hpp"
-
-// main entry file to user code
+//
 #include "game/main.hpp"
-
 // platform specific definitions and objects
 #include <SPI.h>
 #include <XPT2046_Touchscreen.h>
@@ -153,23 +150,6 @@ void setup() {
   printf("     free heap mem: %u B\n", ESP.getFreeHeap());
   printf("largest free block: %u B\n", ESP.getMaxAllocHeap());
   printf("----------------------------------------------------------\n");
-
-  // constexpr int size = 8 * 1024 * 1024 - 256 * 1024;
-  // constexpr int size = 8000000;
-  // char *buf = (char *)heap_caps_calloc(1, size, MALLOC_CAP_SPIRAM);
-  // assert(buf);
-  // char *p = buf;
-  // for (int i = 0; i < size; i++) {
-  //   *p = (char)i;
-  //   p++;
-  // }
-  // p = buf;
-  // for (int i = 0; i < size; i++) {
-  //   assert(*p == (char)i);
-  //   *p = (char)i;
-  //   assert(*p == (char)i);
-  //   p++;
-  // }
 
   heap_caps_print_heap_info(MALLOC_CAP_DEFAULT);
 }
