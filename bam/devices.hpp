@@ -8,7 +8,7 @@
 //
 // uncomment your device or create a new one in 'devices/' and add it below
 // ---------------------------------------------------------------------------
-//#include "devices/ESP32-2432S028R.hpp"
-#include "devices/JC4827W543R.hpp"
+#include "devices/ESP32-2432S028R.hpp"
+//#include "devices/JC4827W543R.hpp"
 // ---------------------------------------------------------------------------
 //

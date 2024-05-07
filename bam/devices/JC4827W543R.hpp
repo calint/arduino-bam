@@ -20,14 +20,11 @@
 #define GFX_BL 1
 
 static Arduino_ESP32QSPI bus{
-    45 /* cs */,
-    47 /* sck */,
-    21 /* d0 */,
-    48 /* d1 */,
-    40 /* d2 */,
-    39 /* d3 */
+  45 /* cs */,
+  47 /* sck */,
+  21 /* d0 */,
+  48 /* d1 */,
+  40 /* d2 */,
+  39 /* d3 */
 };
-static Arduino_NV3041A display{
-     &bus, GFX_NOT_DEFINED /* RST */, TFT_ORIENTATION, true /* IPS */
-};
-
+static Arduino_NV3041A display{ &bus, GFX_NOT_DEFINED /* RST */, TFT_ORIENTATION, true /* IPS */ };

@@ -20,11 +20,10 @@
 #define GFX_BL 21
 
 static Arduino_ESP32SPI bus{
-    2 /* DC */,
-    15 /* CS */,
-    14 /* SCK */,
-    13 /* MOSI */,
-    12 /* MISO */
+  2 /* DC */,
+  15 /* CS */,
+  14 /* SCK */,
+  13 /* MOSI */,
+  12 /* MISO */
 };
 static Arduino_ILI9341 display{ &bus, GFX_NOT_DEFINED /* RST */, TFT_ORIENTATION /* rotation */ };
-
