@@ -1,12 +1,3 @@
-//
-// intended for: JC4827W543R
-//    Guition ESP32-S3 8M PSRAM 4M FLASH with WIFI and Bluetooth
-//    4.3-inch IPS 480*272 LCD display
-//
-//          from: http://www.jczn1688.com/
-//  purchased at: https://www.aliexpress.com/item/1005006729377800.html
-//
-
 // note. design decision of 'hpp' source files
 // * the program is one file split into logical sections using includes
 // * all globals are declared 'static'
@@ -25,7 +16,6 @@
 // Due to a technical limitation, the maximum statically allocated DRAM usage is
 // 160KB. The remaining 160KB (for a total of 320KB of DRAM) can only be
 // allocated at runtime as heap.
-// -- https://stackoverflow.com/questions/71085927/how-to-extend-esp32-heap-size
 
 // reviewed: 2023-12-11
 // reviewed: 2024-05-01
