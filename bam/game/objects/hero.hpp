@@ -83,7 +83,9 @@ public:
     return false;
   }
 
-  void on_death_by_collision() override { create_fragments(); }
+  void on_death_by_collision() override {
+    create_fragments(x, y, 16, 150, 2000);
+  }
 
   void pre_render() override {
     game_object::pre_render();
@@ -94,22 +96,5 @@ public:
 
     spr_right->scr_x = int16_t(spr->scr_x + sprite_width);
     spr_right->scr_y = spr->scr_y;
-  }
-
-private:
-  static constexpr float frag_speed = 150;
-  static constexpr int frag_count = 16;
-
-  void create_fragments() {
-    for (int i = 0; i < frag_count; i++) {
-      fragment *frg = new (objects.allocate_instance()) fragment{};
-      frg->die_at_ms = clk.ms + 500;
-      frg->x = x;
-      frg->y = y;
-      frg->dx = random_float(-frag_speed, frag_speed);
-      frg->dy = random_float(-frag_speed, frag_speed);
-      frg->ddx = random_float(-frag_speed, frag_speed);
-      frg->ddy = random_float(-frag_speed, frag_speed);
-    }
   }
 };

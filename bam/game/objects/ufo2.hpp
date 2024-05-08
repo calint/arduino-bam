@@ -43,6 +43,6 @@ public:
   }
 
   void on_death_by_collision() override {
-    create_fragments(x, y, 32, 150, 1000);
+    create_fragments(x, y, 32, 150, 2000);
   }
 };
