@@ -29,6 +29,13 @@ static Arduino_ESP32SPI bus{
   13 /* MOSI */,
   12 /* MISO */
 };
+// static Arduino_ESP32SPIDMA bus{
+//   2 /* DC */,
+//   15 /* CS */,
+//   14 /* SCK */,
+//   13 /* MOSI */,
+//   -1 /* MISO */
+// };
 static Arduino_ILI9341 display{
   &bus,
   GFX_NOT_DEFINED /* RST */,

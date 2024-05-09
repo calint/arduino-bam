@@ -54,8 +54,7 @@ bool Arduino_ESP32QSPI::begin(int32_t speed, int8_t dataMode)
       .data5_io_num = -1,
       .data6_io_num = -1,
       .data7_io_num = -1,
-      // .max_transfer_sz = (ESP32QSPI_MAX_PIXELS_AT_ONCE * 16) + 8,
-      .max_transfer_sz = ESP32QSPI_MAX_TRANSFER_B,
+      .max_transfer_sz = ESP32QSPI_MAX_DMA_TRANSFER_B,
       .flags = SPICOMMON_BUSFLAG_MASTER | SPICOMMON_BUSFLAG_GPIO_PINS,
       .intr_flags = 0};
   esp_err_t ret = spi_bus_initialize(ESP32QSPI_SPI_HOST, &buscfg, ESP32QSPI_DMA_CHANNEL);
@@ -798,8 +797,6 @@ void Arduino_ESP32QSPI::asyncDMAWaitForCompletion()
 
 void Arduino_ESP32QSPI::asyncDMAWriteBytes(uint8_t *data, uint32_t len)
 {
-  assert(len <= ESP32QSPI_MAX_TRANSFER_B);
-
   asyncDMAWaitForCompletion();
 
   _spi_tran_async.tx_buffer = data;
