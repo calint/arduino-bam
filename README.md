@@ -9,8 +9,8 @@ a toy game for trying out devices and compare performances
 ## Arduino IDE 2.3.2
 * additional boards `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
 * select board for device:
-  - `ESP32S3 Dev Module` for `JC4827W543R`
   - `ESP32 Dev Module` for `ESP32-2432S028R`
+  - `ESP32S3 Dev Module` for `JC4827W543R`
 
 ## howto
 * `bam/devices.hpp` contains a list of tested devices
