@@ -43,7 +43,8 @@ static XPT2046_Touchscreen touch_screen{ XPT2046_CS, XPT2046_IRQ };
 // number of scanlines to render before DMA transfer
 static constexpr int dma_n_scanlines = 8;
 // note. performance on device:
-//  1: 25 fps, 2: 28 fps, 4: 29 fps, 8: 31 fps, 16: 31 fps, 32: 31 fps
+//  ESP32-2432S028R 1: 25 fps, 2: 28 fps, 4: 29 fps, 8: 31 fps, 16: 31 fps, 32: 31 fps
+//  JC4827W543R     1: 26 fps, 2: 32 fps, 4: 35 fps, 8: 37 fps, 16: 38 fps, 32: 39 fps
 
 // alternating buffers for rendering scanlines while DMA is active
 // allocated in 'setup()'
