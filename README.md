@@ -13,8 +13,8 @@ a toy game for trying out devices and compare performances
   - Sketchbook location: directory of cloned repository
   - Additional boards manager URLs: `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
 * select board for device:
-  - `ESP32 Dev Module` for `ESP32-2432S028R`
-  - `ESP32S3 Dev Module` for `JC4827W543R`
+  - `ESP32-2432S028R`: `ESP32 Dev Module`
+  - `JC4827W543R`: `ESP32S3 Dev Module`
 
 ## howto
 * `bam/devices.hpp` contains a list of tested devices
